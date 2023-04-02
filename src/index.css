@@ -35,3 +35,6 @@ h1{
 gif:hover ::before {
   content: "Right click and Save!";
 }
+.progress{
+  margin-top: 1rem;
+}
