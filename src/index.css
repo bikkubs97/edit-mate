@@ -1,0 +1,37 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-image: url('/bgv.jpg');
+  background-size:cover;
+  color: aliceblue;
+ 
+}
+.placeholder{
+  width: 350;
+  height: 350;
+  background-color: rgb(255, 145, 0);
+}
+video, img{
+  border: 3px solid white;
+}
+
+h1{
+  color: aqua;
+}
+gif:hover ::before {
+  content: "Right click and Save!";
+}
