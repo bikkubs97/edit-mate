@@ -21,12 +21,6 @@ function App() {
   async function convertToGif(){
     //Write the File in memory as test.mp4 fetched form user
     ffmpeg.FS('writeFile', 'test.mp4', await fetchFile(video))
-
-    //progres logging
-   /* ffmpeg.setProgress(({ ratio }) => {
-      setProgress((ratio * 100.0).toFixed(2))
-      
-    });*/
   
     //run ffmpeg commands
     await ffmpeg.run('-i', 'test.mp4', '-t', '2.5', '-ss', '2.0', '-f', 'gif', 'out.gif')
@@ -40,12 +34,6 @@ function App() {
     setGif(url)
 
   }
-
-
-
-
-
-
   return ready ? (
     <div className='app'>
       <h1>Edit Mate</h1>
@@ -61,19 +49,10 @@ function App() {
       )}</div>
       <br/>
     
-      <input type="file" onChange={(e) => setVideo(e.target.files?.item(0))} />
-
-    
-   
-      
-      <button onClick={convertToGif}>Convert to GIF</button>
-       
-      
-      
+      <input type="file" onChange={(e) => setVideo(e.target.files?.item(0))} />          
+      <button onClick={convertToGif}>Convert to GIF</button>          
       {gif && <div> <p>Here's Your GIF, Right Click and Save!</p> <img src={gif} width="350" /> </div> }
-      
-      <br/>
-     
+      <br/>     
     </div>
   ) : (
     <p>Loading...</p>
